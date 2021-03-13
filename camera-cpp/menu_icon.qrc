@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>libs/images/camera.png</file>
+        <file>haarcascade_frontalface_alt.xml</file>
+    </qresource>
+</RCC>
