@@ -6,4 +6,4 @@
 #dict()
 #{key:value}
 dic={0:0,1:1,2:2}
-print dic[0]
+print(dic[0])

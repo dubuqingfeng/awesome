@@ -13,6 +13,7 @@ local_conn = pymysql.connect(host='localhost', port=3306, user='root', passwd=''
                              cursorclass=pymysql.cursors.DictCursor, charset='utf8')
 local_cur = local_conn.cursor()
 
+
 def get_data():
     api_url = "https://api.blockchair.com/bitcoin-cash/blocks?q=id(557241..557397)&limit=100&offset=100"
     headers = {'Test': "test"}
@@ -41,12 +42,14 @@ def insert(blocks):
         except Exception as e:
             print(e)
 
+
 def fetch():
     sql = "select * from bch_blocks where height >= " + str(start_height) + " and height <= " + str(end_height) +" order by reward desc;"
     print(sql)
     local_cur.execute(sql, ())
     for row in local_cur:
         data.append(row)
+
 
 def calculate(count):
     optimize_number = round(count * 0.05)
