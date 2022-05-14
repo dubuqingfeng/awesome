@@ -1,4 +1,4 @@
-package workerpool
+package main
 
 func main() {
 	const numWorkers = 10

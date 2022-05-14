@@ -1,4 +1,4 @@
-package channel
+package main
 
 func main() {
 	// channel

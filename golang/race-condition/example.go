@@ -10,6 +10,7 @@ func test() {
 }
 
 func main() {
+    // fatal error: all goroutines are asleep - deadlock!
     glo = 0
     n := 10000
     quit = make(chan int, n)
